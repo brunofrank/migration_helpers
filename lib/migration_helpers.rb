@@ -22,7 +22,7 @@ module ActiveRecord
         columns = []
         values = []
     
-        data.each_pair do |column, value|
+        data.each do |column, value|
           columns << quote_column_name(column.to_s)
           values << "#{quote(value)}"
         end
